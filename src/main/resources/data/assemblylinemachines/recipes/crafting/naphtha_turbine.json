@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"sss",
+		"iti",
+		" f "
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"s":{
+			"item": "assemblylinemachines:smoldering_stone"
+		},
+		"t":{
+			"item": "assemblylinemachines:temperature_regulator"
+		},
+		"f":{
+			"item": "minecraft:furnace"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:naphtha_turbine"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"iri",
+		"rsr",
+		"iri"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"r":{
+			"tag": "forge:dusts/redstone"
+		},
+		"s":{
+			"tag": "forge:gears/pure_steel"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:conduction_component"
+	}
+}

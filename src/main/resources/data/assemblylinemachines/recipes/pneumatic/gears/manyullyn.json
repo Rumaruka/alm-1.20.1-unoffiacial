@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/manyullyn"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/manyullyn"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/manyullyn"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/manyullyn"
+  },
+  "time": 9
+}

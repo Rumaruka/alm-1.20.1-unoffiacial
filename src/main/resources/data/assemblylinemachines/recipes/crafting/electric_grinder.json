@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"bsb",
+		"svs",
+		"imi"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"m":{
+			"item": "assemblylinemachines:kinetic_grinder"
+		},
+		"v":{
+			"item": "assemblylinemachines:conduction_component"
+		},
+		"i":{
+			"tag": "forge:ingots/iron"
+		},
+		"b":{
+			"item": "assemblylinemachines:titanium_blade"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:electric_grinder"
+	}
+}

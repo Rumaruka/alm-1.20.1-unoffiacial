@@ -1,0 +1,37 @@
+{
+	
+	
+	
+	"multipart":[
+		
+		{"apply": { "model": "assemblylinemachines:block/bath/fluid_bath_empty"}},
+        {   "when": { "status": 5},
+            "apply": { "model": "assemblylinemachines:block/bath/fluid_bath_sludge"}
+        },
+		{   "when": { "fluid": "water", "status": 4 },
+            "apply": { "model": "assemblylinemachines:block/bath/water/fluid_bath_water_full"}
+        },
+        {   "when": { "fluid": "water", "status": 3 },
+            "apply": { "model": "assemblylinemachines:block/bath/water/fluid_bath_water_75"}
+        },
+		{   "when": { "fluid": "water", "status": 2 },
+            "apply": { "model": "assemblylinemachines:block/bath/water/fluid_bath_water_50"}
+        },
+		{   "when": { "fluid": "water", "status": 1 },
+            "apply": { "model": "assemblylinemachines:block/bath/water/fluid_bath_water_25"}
+        },
+		{   "when": { "fluid": "lava", "status": 4 },
+            "apply": { "model": "assemblylinemachines:block/bath/lava/fluid_bath_lava_full"}
+        },
+        {   "when": { "fluid": "lava", "status": 3 },
+            "apply": { "model": "assemblylinemachines:block/bath/lava/fluid_bath_lava_75"}
+        },
+		{   "when": { "fluid": "lava", "status": 2 },
+            "apply": { "model": "assemblylinemachines:block/bath/lava/fluid_bath_lava_50"}
+        },
+		{   "when": { "fluid": "lava", "status": 1 },
+            "apply": { "model": "assemblylinemachines:block/bath/lava/fluid_bath_lava_25"}
+        }
+	]
+	
+}

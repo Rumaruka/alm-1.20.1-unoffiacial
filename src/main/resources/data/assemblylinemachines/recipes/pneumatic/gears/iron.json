@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/iron"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/iron"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/iron"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/iron"
+  },
+  "time": 9
+}

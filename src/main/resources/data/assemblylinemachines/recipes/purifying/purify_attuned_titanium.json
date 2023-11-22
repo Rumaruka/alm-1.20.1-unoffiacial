@@ -1,0 +1,16 @@
+{
+	"type": "assemblylinemachines:purifier",
+	"part_a":{
+		"tag": "forge:dusts/attuned_titanium"
+	},
+	"part_b":{
+		"tag": "forge:ender_pearls"
+	},
+	"tobepurified":{
+		"tag": "forge:ingots/pure_titanium"
+	},
+	"output":{
+		"item": "assemblylinemachines:attuned_titanium_ingot"
+	},
+	"time": 600
+}

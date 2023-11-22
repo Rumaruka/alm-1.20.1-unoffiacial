@@ -1,0 +1,29 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/corrupt_lapis"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/lapis"
+      }
+    }
+  ],
+  "grinds": 15,
+  "input": {
+    "tag": "forge:ores/corrupt_lapis"
+  },
+  "machine_required": true,
+  "output": {
+    "count": 12,
+    "tag": "forge:dusts/lapis"
+  }
+}

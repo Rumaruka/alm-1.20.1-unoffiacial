@@ -1,0 +1,30 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "chanceToDouble": 0.25,
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/raw_flerovium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/flerovium"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:storage_blocks/raw_flerovium"
+  },
+  "machine_required": true,
+  "output": {
+    "count": 9,
+    "tag": "forge:dusts/flerovium"
+  }
+}

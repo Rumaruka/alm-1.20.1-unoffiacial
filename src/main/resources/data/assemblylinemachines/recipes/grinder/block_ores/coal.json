@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "PUREGOLD",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/coal"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/coal"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:ores/coal"
+  },
+  "output": {
+    "count": 4,
+    "tag": "forge:dusts/coal"
+  }
+}

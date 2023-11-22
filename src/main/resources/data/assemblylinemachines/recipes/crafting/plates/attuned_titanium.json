@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "lateGamePlatesRequireCompressor",
+      "enabled_on": false
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/attuned_titanium"
+    },
+    {
+      "tag": "assemblylinemachines:hammers"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "assemblylinemachines:attuned_titanium_plate"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "overrides": [
+    {
+      "model": "assemblylinemachines:item/novasteel_axe_active",
+      "predicate": {
+        "assemblylinemachines:active": 1.0
+      }
+    }
+  ],
+  "textures": {
+    "layer0": "assemblylinemachines:item/novasteel_axe"
+  }
+}

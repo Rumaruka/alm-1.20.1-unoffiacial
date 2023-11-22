@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"geg",
+		"ici",
+		"fgf"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"e":{
+			"item": "assemblylinemachines:energy_pipe"
+		},
+		"f":{
+			"item": "minecraft:furnace"
+		},
+		"g":{
+			"tag": "assemblylinemachines:precious_gears"
+		},
+		"c":{
+			"item": "assemblylinemachines:convection_component"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:coal_generator"
+	}
+}

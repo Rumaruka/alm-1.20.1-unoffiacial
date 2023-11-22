@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/mystium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/mystium"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/mystium"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/mystium"
+  },
+  "time": 9
+}

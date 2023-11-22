@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorRodIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/cobalt"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/cobalt"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/cobalt"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/cobalt"
+  },
+  "time": 8
+}

@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"bsb",
+		"sts",
+		"lgl"
+	],
+	"key":{
+		"s":{
+			"tag": "assemblylinemachines:industrial_gears"
+		},
+		"b":{
+			"item": "assemblylinemachines:steel_tank_component"
+		},
+		"l":{
+			"tag": "forge:gems/lapis"
+		},
+		"t":{
+			"item": "assemblylinemachines:conduction_component"
+		},
+		"g":{
+			"item": "assemblylinemachines:kinetic_fluid_mixer"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:electric_fluid_mixer"
+	}
+}

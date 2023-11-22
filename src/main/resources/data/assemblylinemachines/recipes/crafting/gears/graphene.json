@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "lateGameGearsRequireCompressor",
+      "enabled_on": false
+    }
+  ],
+  "key": {
+    "A": {
+      "tag": "forge:plates/graphene"
+    },
+    "B": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    " A ",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "item": "assemblylinemachines:graphene_gear"
+  }
+}

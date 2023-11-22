@@ -1,0 +1,7 @@
+{
+	"parent": "block/leaves",
+	"render_type": "cutout",
+	"textures": {
+		"all": "assemblylinemachines:block/cocoa_leaves"
+	}
+}

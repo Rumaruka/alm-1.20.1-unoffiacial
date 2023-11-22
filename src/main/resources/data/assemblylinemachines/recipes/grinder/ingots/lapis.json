@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/lapis"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/lapis"
+      }
+    }
+  ],
+  "grinds": 4,
+  "input": {
+    "tag": "forge:gems/lapis"
+  },
+  "machine_required": true,
+  "output": {
+    "tag": "forge:dusts/lapis"
+  }
+}
