@@ -1,0 +1,16 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"tag": "assemblylinemachines:grass_seeds_plantable"
+	},
+	"input_b":{
+		"item": "assemblylinemachines:grass_seeds"
+	},
+	"output":{
+		"item": "minecraft:grass_block"
+	},
+	"stirs": 5,
+	"fluid": "minecraft:water",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "QUARTER"
+}

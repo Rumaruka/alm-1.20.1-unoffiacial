@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:ingots/mystium"
+    },
+    "B": {
+      "tag": "forge:rods/steel"
+    }
+  },
+  "pattern": [
+    "A",
+    "B",
+    "B"
+  ],
+  "result": {
+    "item": "assemblylinemachines:mystium_shovel"
+  }
+}

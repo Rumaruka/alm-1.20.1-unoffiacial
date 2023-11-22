@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorNuggetIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:nuggets/aluminum"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/aluminum"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:nuggets/aluminum"
+  },
+  "output": {
+    "tag": "forge:ingots/aluminum"
+  },
+  "time": 5
+}

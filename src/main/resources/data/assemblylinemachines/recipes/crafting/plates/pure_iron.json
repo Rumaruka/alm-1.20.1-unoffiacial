@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/pure_iron"
+    },
+    {
+      "tag": "assemblylinemachines:hammers"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "item": "assemblylinemachines:pure_iron_plate"
+  }
+}

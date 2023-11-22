@@ -1,0 +1,7 @@
+{
+	"variants":{
+		"critical=false": {"model": "assemblylinemachines:block/entropy_reactor_core"},
+		"critical=true": {"model": "assemblylinemachines:block/entropy_reactor_core_critical"}
+	}
+	
+}

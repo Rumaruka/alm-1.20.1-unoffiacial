@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:ingots/steel"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "A A",
+    "A A"
+  ],
+  "result": {
+    "item": "assemblylinemachines:steel_leggings"
+  }
+}

@@ -1,0 +1,16 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"tag": "assemblylinemachines:forest_fungus_plantable"
+	},
+	"input_b":{
+		"item": "assemblylinemachines:forest_fungus"
+	},
+	"output":{
+		"item": "minecraft:podzol"
+	},
+	"stirs": 5,
+	"fluid": "minecraft:water",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "QUARTER"
+}

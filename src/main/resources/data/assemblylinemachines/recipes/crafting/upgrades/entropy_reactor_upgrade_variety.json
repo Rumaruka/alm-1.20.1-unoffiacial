@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"ysy",
+		"sxs",
+		"ysy"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:sheets/plastic"
+		},
+		"x":{
+			"item": "assemblylinemachines:strange_matter"
+		},
+		"y":{
+			"tag": "assemblylinemachines:entropy_reactor_outputs"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:entropy_reactor_upgrade_variety"
+	}
+}

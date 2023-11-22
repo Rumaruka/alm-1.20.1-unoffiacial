@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:plates/pure_steel"
+    },
+    "B": {
+      "item": "assemblylinemachines:mystium_armor_plating"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "B B",
+    "B B"
+  ],
+  "result": {
+    "item": "assemblylinemachines:mystium_leggings"
+  }
+}

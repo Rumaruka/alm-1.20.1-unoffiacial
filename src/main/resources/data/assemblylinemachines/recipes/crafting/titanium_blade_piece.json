@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" y ",
+		"yxy"
+	],
+	"key":{
+		"x":{
+			"tag": "forge:ingots/titanium"
+		},
+		"y":{
+			"tag": "forge:nuggets/titanium"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:titanium_blade_piece"
+	}
+}

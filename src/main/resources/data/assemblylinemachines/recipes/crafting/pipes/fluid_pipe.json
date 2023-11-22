@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"iwi",
+		"qqq",
+		"iwi"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"q":{
+			"item": "assemblylinemachines:black_granite"
+		},
+		"w":{
+			"tag": "forge:gems/lapis"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:fluid_pipe",
+		"count": 12
+	}
+}

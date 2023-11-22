@@ -1,0 +1,13 @@
+{
+	"type": "assemblylinemachines:alloying",
+	"part_a":{
+		"tag": "forge:plates/chromium"
+	},
+	"part_b":{
+		"tag": "forge:plates/pure_steel"
+	},
+	"output":{
+		"item": "assemblylinemachines:stainless_steel_plate"
+	},
+	"time": 300
+}

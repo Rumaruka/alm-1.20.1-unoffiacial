@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/uranium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/uranium"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/uranium"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/uranium"
+  },
+  "time": 9
+}

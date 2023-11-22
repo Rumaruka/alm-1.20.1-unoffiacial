@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:nuggets/steel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/steel"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:nuggets/steel"
+  },
+  "output": {
+    "tag": "forge:ingots/steel"
+  },
+  "time": 5
+}

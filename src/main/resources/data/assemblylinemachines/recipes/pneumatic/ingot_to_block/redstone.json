@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/redstone"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/redstone"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:dusts/redstone"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/redstone"
+  },
+  "time": 9
+}

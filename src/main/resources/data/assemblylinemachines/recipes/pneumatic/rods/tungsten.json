@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorRodIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/tungsten"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/tungsten"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/tungsten"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/tungsten"
+  },
+  "time": 8
+}

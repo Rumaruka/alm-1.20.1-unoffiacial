@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"rsr",
+		"gwg",
+		"rsr"
+	],
+	"key":{
+		"r":{
+			"tag": "forge:rods/steel"
+		},
+		"g":{
+			"tag": "forge:glass_panes"
+		},
+		"s":{
+			"tag": "forge:ingots/steel"
+		},
+		"w":{
+			"item": "assemblylinemachines:wooden_fluid_tank"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:steel_fluid_tank"
+	}
+}

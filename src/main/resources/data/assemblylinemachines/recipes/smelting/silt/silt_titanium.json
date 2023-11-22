@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 400,
+  "experience": 0.0,
+  "ingredient": {
+    "item": "assemblylinemachines:silt_titanium"
+  },
+  "result": "assemblylinemachines:pure_titanium_ingot"
+}

@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/nickel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/nickel"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/nickel"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/nickel"
+  },
+  "time": 9
+}

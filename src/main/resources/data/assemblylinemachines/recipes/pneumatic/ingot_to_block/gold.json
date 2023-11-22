@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/gold"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:ingots/gold"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/gold"
+  },
+  "time": 9
+}

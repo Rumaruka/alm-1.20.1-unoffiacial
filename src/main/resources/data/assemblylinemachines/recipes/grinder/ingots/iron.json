@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/iron"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/iron"
+      }
+    }
+  ],
+  "grinds": 4,
+  "input": {
+    "tag": "forge:ingots/iron"
+  },
+  "output": {
+    "tag": "forge:dusts/iron"
+  }
+}

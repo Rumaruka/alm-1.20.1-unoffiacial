@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"sss",
+		"gmg",
+		"ftf"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"f":{
+			"item": "minecraft:blast_furnace"
+		},
+		"t":{
+			"item": "assemblylinemachines:temperature_regulator"
+		},
+		"g":{
+			"tag": "assemblylinemachines:industrial_gears"
+		},
+		"m":{
+			"item": "assemblylinemachines:conduction_component"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:alloy_smelter"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"cgc",
+		"gpg",
+		"cgc"
+	],
+	"key":{
+		"g":{
+			"tag": "assemblylinemachines:all_gears"
+		},
+		"c":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"p":{
+			"item": "assemblylinemachines:empowered_coal"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:gearbox"
+	}
+}

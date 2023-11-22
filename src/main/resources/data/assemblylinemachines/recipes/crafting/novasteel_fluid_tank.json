@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"rsr",
+		"gwg",
+		"rsr"
+	],
+	"key":{
+		"r":{
+			"tag": "forge:rods/novasteel"
+		},
+		"g":{
+			"tag": "forge:glass_panes"
+		},
+		"s":{
+			"tag": "forge:plates/novasteel"
+		},
+		"w":{
+			"item": "assemblylinemachines:attuned_titanium_fluid_tank"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:novasteel_fluid_tank"
+	}
+}

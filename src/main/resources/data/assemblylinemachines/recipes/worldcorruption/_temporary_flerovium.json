@@ -1,0 +1,9 @@
+{
+	"type": "assemblylinemachines:world_corruption",
+	"input":{
+		"tag": "forge:storage_blocks/mystium"
+	},
+	"output":{
+		"item": "assemblylinemachines:flerovium_block"
+	}
+}

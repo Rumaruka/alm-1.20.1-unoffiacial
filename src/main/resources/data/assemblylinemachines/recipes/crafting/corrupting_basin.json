@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"c c",
+		"n n",
+		"ccc"
+	],
+	"key":{
+		"c":{
+			"tag": "forge:plates/chromium"
+		},
+		"n":{
+			"tag": "forge:plates/novasteel"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:corrupting_basin"
+	}
+}

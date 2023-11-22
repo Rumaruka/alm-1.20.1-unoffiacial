@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/attuned_titanium"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "assemblylinemachines:attuned_titanium_ingot"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#forge:rods/titanium",
+    "#forge:rods/novasteel",
+    "#forge:rods/attuned_titanium",
+    "#forge:rods/graphene",
+    "#forge:rods/copper",
+    "#forge:rods/gold",
+    "#forge:rods/mystium",
+    "#forge:rods/iron",
+    "#forge:rods/steel",
+    "#forge:rods/chromium"
+  ]
+}

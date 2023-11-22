@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/gold"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/gold"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/gold"
+  },
+  "time": 8
+}

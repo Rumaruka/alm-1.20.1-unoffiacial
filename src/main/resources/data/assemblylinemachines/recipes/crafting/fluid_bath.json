@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"w w",
+		"t t",
+		"www"
+	],
+	"key":{
+		"t":{
+			"tag": "forge:ingots/iron"
+		},
+		"w":{
+			"tag": "minecraft:planks"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:fluid_bath"
+	}
+}

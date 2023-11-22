@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorNuggetIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:nuggets/rose_gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/rose_gold"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:nuggets/rose_gold"
+  },
+  "output": {
+    "tag": "forge:ingots/rose_gold"
+  },
+  "time": 5
+}

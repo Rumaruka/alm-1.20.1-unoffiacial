@@ -1,0 +1,16 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"item": "minecraft:spider_eye"
+	},
+	"input_b":{
+		"item": "minecraft:potato"
+	},
+	"output":{
+		"item": "minecraft:poisonous_potato"
+	},
+	"stirs": 5,
+	"fluid": "assemblylinemachines:dark_energy",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "QUARTER"
+}

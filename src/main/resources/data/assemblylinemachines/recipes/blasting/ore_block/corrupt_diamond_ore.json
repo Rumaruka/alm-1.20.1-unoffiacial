@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient":{
+		"tag": "forge:ores/corrupt_diamond"
+	},
+	"result": "minecraft:diamond",
+	"experience": 1,
+	"cookingtime": 100
+}

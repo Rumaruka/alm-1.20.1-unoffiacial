@@ -1,0 +1,29 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/corrupt_gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/gold"
+      }
+    }
+  ],
+  "grinds": 15,
+  "input": {
+    "tag": "forge:ores/corrupt_gold"
+  },
+  "machine_required": true,
+  "output": {
+    "count": 3,
+    "tag": "forge:dusts/gold"
+  }
+}

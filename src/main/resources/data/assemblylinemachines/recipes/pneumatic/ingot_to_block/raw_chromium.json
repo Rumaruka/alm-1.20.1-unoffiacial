@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/chromium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/raw_chromium"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:raw_materials/chromium"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/raw_chromium"
+  },
+  "time": 9
+}

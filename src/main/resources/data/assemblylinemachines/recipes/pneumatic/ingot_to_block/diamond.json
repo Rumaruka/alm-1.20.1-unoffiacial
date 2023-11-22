@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/diamond"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/diamond"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:gems/diamond"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/diamond"
+  },
+  "time": 9
+}

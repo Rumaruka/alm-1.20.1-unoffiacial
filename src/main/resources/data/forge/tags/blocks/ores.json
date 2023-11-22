@@ -1,0 +1,16 @@
+{
+  "values": [
+    "#forge:ores/titanium",
+    "#forge:ores/corrupt_diamond",
+    "#forge:ores/chromium",
+    "#forge:ores/corrupt_emerald",
+    "#forge:ores/corrupt_lapis",
+    "#forge:ores/corrupt_gold",
+    "#forge:ores/corrupt_copper",
+    "#forge:ores/corrupt_redstone",
+    "#forge:ores/corrupt_coal",
+    "#forge:ores/flerovium",
+    "#forge:ores/corrupt_iron",
+    "#forge:ores/corrupt_titanium"
+  ]
+}

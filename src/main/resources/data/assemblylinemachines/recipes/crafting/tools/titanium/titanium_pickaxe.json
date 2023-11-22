@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:ingots/titanium"
+    },
+    "B": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "pattern": [
+    "AAA",
+    " B ",
+    " B "
+  ],
+  "result": {
+    "item": "assemblylinemachines:titanium_pickaxe"
+  }
+}

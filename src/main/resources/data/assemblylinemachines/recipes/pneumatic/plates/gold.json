@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorPlateIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/gold"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/gold"
+  },
+  "mold": "plate",
+  "output": {
+    "tag": "forge:plates/gold"
+  },
+  "time": 7
+}

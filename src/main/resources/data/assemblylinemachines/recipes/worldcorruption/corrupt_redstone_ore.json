@@ -1,0 +1,9 @@
+{
+	"type": "assemblylinemachines:world_corruption",
+	"input":{
+		"item": "minecraft:redstone_ore"
+	},
+	"output":{
+		"item": "assemblylinemachines:corrupt_redstone_ore"
+	}
+}

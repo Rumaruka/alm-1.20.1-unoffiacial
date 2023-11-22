@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"ici",
+		"iri",
+		"iii"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"r":{
+			"tag": "forge:storage_blocks/redstone"
+		},
+		"c":{
+			"tag": "forge:storage_blocks/coal"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:basic_battery"
+	}
+}

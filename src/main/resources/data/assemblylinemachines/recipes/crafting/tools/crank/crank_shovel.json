@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "assemblylinemachines:precious_gears"
+    },
+    "B": {
+      "tag": "forge:rods/steel"
+    }
+  },
+  "pattern": [
+    "A",
+    "B",
+    "B"
+  ],
+  "result": {
+    "item": "assemblylinemachines:crank_shovel"
+  }
+}

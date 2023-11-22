@@ -1,0 +1,7 @@
+{
+	"parent": "assemblylinemachines:block/electric_grinder",
+	"textures": {
+		"3": "assemblylinemachines:block/electric_grinder_active",
+		"5": "assemblylinemachines:block/electric_furnace_inset_active"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"ses",
+		"sqs",
+		"sss"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"e":{
+			"tag": "forge:chests"
+		},
+		"q":{
+			"item": "assemblylinemachines:singularity"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:bottomless_storage_unit"
+	}
+}

@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorStorageBlockIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/platinum"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/platinum"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:ingots/platinum"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/platinum"
+  },
+  "time": 9
+}

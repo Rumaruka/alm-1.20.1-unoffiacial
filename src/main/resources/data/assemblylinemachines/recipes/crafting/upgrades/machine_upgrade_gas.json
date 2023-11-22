@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"sps",
+		" s "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"p":{
+			"item": "assemblylinemachines:steel_tank_component"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:machine_upgrade_gas"
+	}
+}

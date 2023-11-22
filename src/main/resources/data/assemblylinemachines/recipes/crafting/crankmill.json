@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"iqi",
+		"iqi",
+		"iri"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"q":{
+			"item": "assemblylinemachines:energy_pipe"
+		},
+		"r":{
+			"item": "assemblylinemachines:crank_shaft"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:crankmill"
+	}
+}

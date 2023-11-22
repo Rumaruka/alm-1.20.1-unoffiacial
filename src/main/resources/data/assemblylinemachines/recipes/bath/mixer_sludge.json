@@ -1,0 +1,17 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"tag": "assemblylinemachines:organics"
+	},
+	"input_b":{
+		"tag": "assemblylinemachines:organics"
+	},
+	"output":{
+		"item": "assemblylinemachines:sludge",
+		"count": 2
+	},
+	"stirs": 5,
+	"fluid": "minecraft:water",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "HALF"
+}

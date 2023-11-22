@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"sps",
+		" s "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/stainless_steel"
+		},
+		"p":{
+			"tag": "forge:plates/energized_gold"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:autocrafting_upgrade_sustained"
+	}
+}

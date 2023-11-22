@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"iri",
+		"rgr",
+		"iri"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_gold"
+		},
+		"r":{
+			"tag": "forge:dusts/redstone"
+		},
+		"g":{
+			"tag": "forge:gears/pure_steel"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:convection_component"
+	}
+}

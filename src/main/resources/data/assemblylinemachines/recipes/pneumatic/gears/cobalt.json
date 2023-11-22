@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/cobalt"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/cobalt"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/cobalt"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/cobalt"
+  },
+  "time": 9
+}

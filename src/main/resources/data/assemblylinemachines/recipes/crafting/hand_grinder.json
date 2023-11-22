@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"sss",
+		"btb"
+	],
+	"key":{
+		"t":{
+			"tag": "forge:ingots/titanium"
+		},
+		"b":{
+			"tag": "forge:ingots/brick"
+		},
+		"s":{
+			"item": "assemblylinemachines:silt_brick"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:hand_grinder"
+	}
+}

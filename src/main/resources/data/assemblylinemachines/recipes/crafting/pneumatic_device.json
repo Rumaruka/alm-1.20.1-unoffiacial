@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"c  ",
+		"ssp",
+		"c  "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:rods/titanium"
+		},
+		"c":{
+			"tag": "forge:plates/chromium"
+		},
+		"p":{
+			"item": "assemblylinemachines:basic_pneumatic_device"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:pneumatic_device"
+	}
+}

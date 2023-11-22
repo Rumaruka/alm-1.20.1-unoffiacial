@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"axa",
+		"bcb",
+		"aya"
+	],
+	"key":{
+		"a":{
+			"tag": "forge:plates/attuned_titanium"
+		},
+		"c":{
+			"item": "assemblylinemachines:advanced_battery_cell"
+		},
+		"b":{
+			"item": "assemblylinemachines:ultimate_battery"
+		},
+		"x":{
+			"item": "assemblylinemachines:overclocked_conduction_component"
+		},
+		"y":{
+			"item": "assemblylinemachines:overclocked_convection_component"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:ultimate_battery_cell"
+	}
+}

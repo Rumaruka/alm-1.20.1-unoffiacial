@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"grg",
+		" s "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/stainless_steel"
+		},
+		"r":{
+			"item": "assemblylinemachines:steel_tank_component"
+		},
+		"g":{
+			"tag": "forge:glass_panes"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:stainless_steel_tank_component"
+	}
+}

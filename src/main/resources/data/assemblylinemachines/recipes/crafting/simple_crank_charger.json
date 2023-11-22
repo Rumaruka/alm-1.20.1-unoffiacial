@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"iei",
+		"isi",
+		"isi"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"e":{
+			"tag": "forge:chests"
+		},
+		"s":{
+			"item": "assemblylinemachines:crank_shaft"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:simple_crank_charger"
+	}
+}

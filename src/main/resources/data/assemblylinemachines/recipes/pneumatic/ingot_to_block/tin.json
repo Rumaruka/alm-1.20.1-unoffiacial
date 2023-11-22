@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorStorageBlockIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/tin"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/tin"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:ingots/tin"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/tin"
+  },
+  "time": 9
+}

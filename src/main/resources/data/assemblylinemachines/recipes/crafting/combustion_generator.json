@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" e ",
+		"scs",
+		"sts"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"e":{
+			"item": "assemblylinemachines:advanced_energy_pipe"
+		},
+		"c":{
+			"item": "assemblylinemachines:empowered_convection_component"
+		},
+		"t":{
+			"item": "assemblylinemachines:stainless_steel_tank_component"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:combustion_generator"
+	}
+}

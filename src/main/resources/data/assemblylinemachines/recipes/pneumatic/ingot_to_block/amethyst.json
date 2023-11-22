@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/amethyst"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/amethyst"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:gems/amethyst"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/amethyst"
+  },
+  "time": 9
+}

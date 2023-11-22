@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient":{
+		"tag": "forge:ores/corrupt_redstone"
+	},
+	"result": "minecraft:redstone",
+	"experience": 1,
+	"cookingtime": 100
+}

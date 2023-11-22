@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/pure_copper"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/pure_copper"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/pure_copper"
+  },
+  "mold": "plate",
+  "output": {
+    "count": 3,
+    "tag": "forge:plates/pure_copper"
+  },
+  "time": 7
+}

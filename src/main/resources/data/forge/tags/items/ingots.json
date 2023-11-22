@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#forge:ingots/pure_steel",
+    "#forge:ingots/novasteel",
+    "#forge:ingots/graphene",
+    "#forge:ingots/pure_titanium",
+    "#forge:ingots/pure_gold",
+    "#forge:ingots/pure_copper",
+    "#forge:ingots/energized_gold",
+    "#forge:ingots/titanium",
+    "#forge:ingots/flerovium",
+    "#forge:ingots/attuned_titanium",
+    "#forge:ingots/mystium",
+    "#forge:ingots/pure_iron",
+    "#forge:ingots/raw_novasteel",
+    "#forge:ingots/chromium",
+    "#forge:ingots/steel"
+  ]
+}

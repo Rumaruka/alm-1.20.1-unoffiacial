@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "assemblylinemachines:block/slab_black_granite" },
+        "type=top": { "model": "assemblylinemachines:block/slab_black_granite_top" },
+        "type=double": { "model": "assemblylinemachines:block/smooth_black_granite" }
+    }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "assemblylinemachines:alloying",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/raw_novasteel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/novasteel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/novasteel"
+      }
+    }
+  ],
+  "output": {
+    "tag": "forge:ingots/novasteel"
+  },
+  "part_a": {
+    "tag": "forge:ingots/raw_novasteel"
+  },
+  "part_b": {
+    "tag": "forge:dusts/novasteel"
+  },
+  "time": 100
+}

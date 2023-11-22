@@ -1,0 +1,9 @@
+{
+  "parent": "forge:item/default",
+  "fluid": "assemblylinemachines:dark_energy",
+  "loader": "forge:fluid_container",
+  "textures": {
+    "base": "assemblylinemachines:item/bucket/base",
+    "fluid": "assemblylinemachines:item/bucket/fluid"
+  }
+}

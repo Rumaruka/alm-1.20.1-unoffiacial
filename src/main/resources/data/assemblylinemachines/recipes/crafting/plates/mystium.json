@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "lateGamePlatesRequireCompressor",
+      "enabled_on": false
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/mystium"
+    },
+    {
+      "tag": "assemblylinemachines:hammers"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "item": "assemblylinemachines:mystium_plate"
+  }
+}

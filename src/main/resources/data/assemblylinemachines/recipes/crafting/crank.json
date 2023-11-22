@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"m  ",
+		"oss",
+		"m  "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:rods/wooden"
+		},
+		"m":{
+			"tag": "forge:ingots/steel"
+		},
+		"o":{
+			"item": "assemblylinemachines:crank_shaft"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:crank"
+	}
+}

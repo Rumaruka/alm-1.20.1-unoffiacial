@@ -1,0 +1,16 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"item": "minecraft:jungle_sapling"
+	},
+	"input_b":{
+		"item": "minecraft:cocoa_beans"
+	},
+	"output":{
+		"item": "assemblylinemachines:cocoa_sapling"
+	},
+	"stirs": 8,
+	"fluid": "minecraft:water",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "FULL"
+}

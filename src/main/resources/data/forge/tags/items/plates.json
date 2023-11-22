@@ -1,0 +1,18 @@
+{
+  "values": [
+    "#forge:plates/novasteel",
+    "#forge:plates/pure_gold",
+    "#forge:plates/chromium",
+    "#forge:plates/mystium",
+    "#forge:plates/pure_titanium",
+    "#forge:plates/wooden",
+    "#forge:plates/pure_steel",
+    "#forge:plates/pure_iron",
+    "#forge:plates/pure_copper",
+    "#forge:plates/flerovium",
+    "#forge:plates/attuned_titanium",
+    "#forge:plates/graphene",
+    "#forge:plates/stainless_steel",
+    "#forge:plates/energized_gold"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "forge:ingots/pure_titanium"
+    },
+    {
+      "tag": "assemblylinemachines:hammers"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "item": "assemblylinemachines:pure_titanium_plate"
+  }
+}

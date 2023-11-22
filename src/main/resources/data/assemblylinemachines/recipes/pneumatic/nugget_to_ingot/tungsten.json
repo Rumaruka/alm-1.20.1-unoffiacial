@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorNuggetIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:nuggets/tungsten"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/tungsten"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:nuggets/tungsten"
+  },
+  "output": {
+    "tag": "forge:ingots/tungsten"
+  },
+  "time": 5
+}

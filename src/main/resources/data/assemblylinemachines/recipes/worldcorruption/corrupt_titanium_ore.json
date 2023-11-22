@@ -1,0 +1,9 @@
+{
+	"type": "assemblylinemachines:world_corruption",
+	"input":{
+		"item": "assemblylinemachines:titanium_ore"
+	},
+	"output":{
+		"item": "assemblylinemachines:corrupt_titanium_ore"
+	}
+}

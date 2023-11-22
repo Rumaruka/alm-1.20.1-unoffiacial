@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"sxs",
+		" s "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"x":{
+			"tag": "forge:storage_blocks/quartz"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:machine_upgrade_conservation"
+	}
+}

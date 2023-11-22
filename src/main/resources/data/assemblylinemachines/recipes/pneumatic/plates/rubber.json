@@ -1,0 +1,21 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:sheets/rubber"
+      }
+    }
+  ],
+  "input": {
+    "item": "assemblylinemachines:rubber_ball"
+  },
+  "mold": "plate",
+  "output": {
+    "count": 4,
+    "tag": "forge:sheets/rubber"
+  },
+  "time": 7
+}

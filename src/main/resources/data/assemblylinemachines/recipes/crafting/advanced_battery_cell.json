@@ -1,0 +1,31 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"pap",
+		"sbs",
+		"dcd"
+	],
+	"key":{
+		"a":{
+			"item": "assemblylinemachines:empowered_conduction_component"
+		},
+		"c":{
+			"item": "assemblylinemachines:empowered_convection_component"
+		},
+		"d":{
+			"tag": "forge:plates/mystium"
+		},
+		"b":{
+			"item": "assemblylinemachines:basic_battery_cell"
+		},
+		"p":{
+			"item": "assemblylinemachines:enhanced_battery"
+		},
+		"s":{
+			"tag": "forge:sheets/plastic"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:advanced_battery_cell"
+	}
+}

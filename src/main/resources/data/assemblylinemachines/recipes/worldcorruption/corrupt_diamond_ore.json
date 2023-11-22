@@ -1,0 +1,9 @@
+{
+	"type": "assemblylinemachines:world_corruption",
+	"input":{
+		"item": "minecraft:diamond_ore"
+	},
+	"output":{
+		"item": "assemblylinemachines:corrupt_diamond_ore"
+	}
+}

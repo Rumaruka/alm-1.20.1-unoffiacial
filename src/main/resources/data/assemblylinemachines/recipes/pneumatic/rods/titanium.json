@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/titanium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/titanium"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/titanium"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/titanium"
+  },
+  "time": 8
+}

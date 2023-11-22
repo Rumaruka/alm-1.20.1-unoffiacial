@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"sxs",
+		" s "
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_titanium"
+		},
+		"x":{
+			"tag": "forge:chests"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:item_pipe_upgrade_stack"
+	}
+}

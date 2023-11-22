@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/zinc"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/zinc"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/zinc"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/zinc"
+  },
+  "time": 9
+}

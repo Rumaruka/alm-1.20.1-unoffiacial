@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "assemblylinemachines:item/creative_upgrade_kit"
+  }
+}

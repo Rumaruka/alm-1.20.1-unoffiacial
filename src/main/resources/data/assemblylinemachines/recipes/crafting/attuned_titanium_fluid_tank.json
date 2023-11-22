@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"rsr",
+		"gwg",
+		"rsr"
+	],
+	"key":{
+		"r":{
+			"tag": "forge:rods/attuned_titanium"
+		},
+		"g":{
+			"tag": "forge:glass_panes"
+		},
+		"s":{
+			"tag": "forge:plates/attuned_titanium"
+		},
+		"w":{
+			"item": "assemblylinemachines:mystium_fluid_tank"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:attuned_titanium_fluid_tank"
+	}
+}

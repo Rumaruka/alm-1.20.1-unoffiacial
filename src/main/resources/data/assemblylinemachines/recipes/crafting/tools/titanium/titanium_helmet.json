@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "tag": "forge:ingots/titanium"
+    }
+  },
+  "pattern": [
+    "AAA",
+    "A A"
+  ],
+  "result": {
+    "item": "assemblylinemachines:titanium_helmet"
+  }
+}

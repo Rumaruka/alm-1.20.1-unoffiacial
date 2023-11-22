@@ -1,0 +1,20 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/crafting_table"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "item": "minecraft:crafting_table"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/crafting_table"
+  },
+  "time": 9
+}

@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/tungsten"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/tungsten"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/tungsten"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/tungsten"
+  },
+  "time": 9
+}

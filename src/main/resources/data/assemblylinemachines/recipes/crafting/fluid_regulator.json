@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" s ",
+		"sms",
+		" s "
+	],
+	"key":{
+		"m":{
+			"item": "minecraft:bucket"
+		},
+		"s":{
+			"tag": "assemblylinemachines:industrial_gears"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:fluid_regulator"
+	}
+}
