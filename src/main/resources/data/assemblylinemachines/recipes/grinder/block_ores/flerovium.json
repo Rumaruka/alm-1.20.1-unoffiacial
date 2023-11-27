@@ -1,0 +1,29 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/flerovium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/flerovium"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:ores/flerovium"
+  },
+  "machine_required": true,
+  "output": {
+    "count": 2,
+    "tag": "forge:dusts/flerovium"
+  }
+}

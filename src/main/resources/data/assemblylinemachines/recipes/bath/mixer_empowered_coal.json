@@ -1,0 +1,17 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"tag": "forge:dusts/coal"
+	},
+	"input_b":{
+		"tag": "forge:dusts/redstone"
+	},
+	"output":{
+		"item": "assemblylinemachines:empowered_coal",
+		"count": 2
+	},
+	"stirs": 5,
+	"fluid": "minecraft:lava",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "HALF"
+}

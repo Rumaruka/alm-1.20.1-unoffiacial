@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/copper"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/copper"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/copper"
+  },
+  "time": 8
+}

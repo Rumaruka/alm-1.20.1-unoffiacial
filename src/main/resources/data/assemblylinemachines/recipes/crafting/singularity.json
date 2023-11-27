@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		" e ",
+		"eoe",
+		" e "
+	],
+	"key":{
+		"e":{
+			"tag": "forge:ender_pearls"
+		},
+		"o":{
+			"tag": "forge:obsidian"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:singularity"
+	}
+}

@@ -1,0 +1,29 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/pure_iron"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/pure_iron"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/pure_iron"
+  },
+  "mold": "gear",
+  "output": {
+    "count": 4,
+    "tag": "forge:gears/pure_iron"
+  },
+  "time": 9
+}

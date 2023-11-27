@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"srs",
+		"dgd",
+		"srs"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:sheets/plastic"
+		},
+		"r":{
+			"tag": "forge:sheets/rubber"
+		},
+		"g":{
+			"tag": "forge:storage_blocks/redstone"
+		},
+		"d":{
+			"item": "assemblylinemachines:upgrade_speed"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:quarry_speed_addon"
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/novasteel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/novasteel"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/novasteel"
+  },
+  "mold": "plate",
+  "output": {
+    "tag": "forge:plates/novasteel"
+  },
+  "time": 7
+}

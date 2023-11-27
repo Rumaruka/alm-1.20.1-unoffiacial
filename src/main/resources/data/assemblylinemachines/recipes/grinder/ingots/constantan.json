@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "grinderIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/constantan"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/constantan"
+      }
+    }
+  ],
+  "grinds": 4,
+  "input": {
+    "tag": "forge:ingots/constantan"
+  },
+  "output": {
+    "tag": "forge:dusts/constantan"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "type": "assemblylinemachines:alloying",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "alloyIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/rose_gold"
+      }
+    }
+  ],
+  "output": {
+    "count": 4,
+    "tag": "forge:ingots/rose_gold"
+  },
+  "part_a": {
+    "count": 3,
+    "tag": "forge:ingots/copper"
+  },
+  "part_b": {
+    "tag": "forge:ingots/gold"
+  },
+  "time": 100
+}

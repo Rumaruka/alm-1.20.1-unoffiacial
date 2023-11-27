@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "grinderIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/tungsten"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/tungsten"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:ores/tungsten"
+  },
+  "output": {
+    "count": 2,
+    "tag": "forge:dusts/tungsten"
+  }
+}

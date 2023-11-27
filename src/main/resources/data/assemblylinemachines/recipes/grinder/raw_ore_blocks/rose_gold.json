@@ -1,0 +1,33 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "chanceToDouble": 0.25,
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "grinderIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/raw_rose_gold"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/rose_gold"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:storage_blocks/raw_rose_gold"
+  },
+  "output": {
+    "count": 9,
+    "tag": "forge:dusts/rose_gold"
+  }
+}

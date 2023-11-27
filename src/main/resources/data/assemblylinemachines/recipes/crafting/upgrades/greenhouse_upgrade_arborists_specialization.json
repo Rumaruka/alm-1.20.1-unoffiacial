@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"bsb",
+		"sbs",
+		"bsb"
+	],
+	"key":{
+		"b":{
+			"tag": "minecraft:saplings"
+		},
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:greenhouse_upgrade_arborists_specialization"
+	}
+}

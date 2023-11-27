@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"sgs",
+		"gqg",
+		"ldl"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:ingots/steel"
+		},
+		"d":{
+			"item": "minecraft:furnace"
+		},
+		"l":{
+			"tag": "forge:ingots/brick"
+		},
+		"g":{
+			"tag": "assemblylinemachines:industrial_gears"
+		},
+		"q":{
+			"item": "assemblylinemachines:conduction_component"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:electric_furnace"
+	}
+}

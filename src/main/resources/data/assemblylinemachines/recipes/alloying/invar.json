@@ -1,0 +1,42 @@
+{
+  "type": "assemblylinemachines:alloying",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "alloyIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/iron"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/nickel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/invar"
+      }
+    }
+  ],
+  "output": {
+    "count": 3,
+    "tag": "forge:ingots/invar"
+  },
+  "part_a": {
+    "count": 2,
+    "tag": "forge:ingots/iron"
+  },
+  "part_b": {
+    "tag": "forge:ingots/nickel"
+  },
+  "time": 100
+}

@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/graphene"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/graphene"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/graphene"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/graphene"
+  },
+  "time": 9
+}

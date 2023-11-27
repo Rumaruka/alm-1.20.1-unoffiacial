@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/flerovium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/flerovium"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/flerovium"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/flerovium"
+  },
+  "time": 9
+}

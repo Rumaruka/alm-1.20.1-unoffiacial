@@ -1,0 +1,399 @@
+package me.haydenb.assemblylinemachines.block.machines;
+
+import com.mojang.datafixers.util.Pair;
+import me.haydenb.assemblylinemachines.block.helpers.ALMTicker;
+import me.haydenb.assemblylinemachines.block.helpers.AbstractMachine;
+import me.haydenb.assemblylinemachines.block.helpers.AbstractMachine.ContainerALMBase;
+import me.haydenb.assemblylinemachines.block.helpers.AbstractMachine.ScreenALMBase;
+import me.haydenb.assemblylinemachines.block.helpers.BlockTileEntity.BlockScreenBlockEntity;
+import me.haydenb.assemblylinemachines.registry.Registry;
+import me.haydenb.assemblylinemachines.registry.utils.FormattingHelper;
+import me.haydenb.assemblylinemachines.registry.utils.ScreenMath;
+import me.haydenb.assemblylinemachines.registry.utils.Utils;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.Container;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.inventory.ClickType;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.context.BlockPlaceContext;
+import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.HorizontalDirectionalBlock;
+import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition.Builder;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
+import net.minecraftforge.common.util.LazyOptional;
+import net.minecraftforge.items.wrapper.InvWrapper;
+import net.minecraftforge.registries.ForgeRegistries;
+
+import java.util.List;
+
+public class BlockBottomlessStorageUnit extends BlockScreenBlockEntity<BlockBottomlessStorageUnit.TEBottomlessStorageUnit> {
+
+    public BlockBottomlessStorageUnit() {
+        super(Block.Properties.of().strength(4f, 15f).sound(SoundType.METAL), "bottomless_storage_unit",
+                BlockBottomlessStorageUnit.TEBottomlessStorageUnit.class);
+        this.registerDefaultState(this.stateDefinition.any().setValue(HorizontalDirectionalBlock.FACING, Direction.NORTH));
+    }
+
+    @Override
+    protected void createBlockStateDefinition(Builder<Block, BlockState> builder) {
+        builder.add(HorizontalDirectionalBlock.FACING);
+    }
+
+    @Override
+    public BlockState getStateForPlacement(BlockPlaceContext context) {
+        return this.defaultBlockState().setValue(HorizontalDirectionalBlock.FACING, context.getHorizontalDirection().getOpposite());
+    }
+
+    @Override
+    public void setPlacedBy(Level world, BlockPos pos, BlockState state, LivingEntity placer, ItemStack stack) {
+
+        if (stack.hasTag()) {
+
+            CompoundTag nbt = stack.getTag();
+
+            if (world.getBlockEntity(pos) instanceof TEBottomlessStorageUnit && nbt.contains("assemblylinemachines:storeditem") && nbt.contains("assemblylinemachines:stored")) {
+
+                TEBottomlessStorageUnit te = (TEBottomlessStorageUnit) world.getBlockEntity(pos);
+                te.internalStored = nbt.getLong("assemblylinemachines:stored");
+                te.creative = nbt.getBoolean("assemblylinemachines:creative");
+                te.storedItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation(nbt.getString("assemblylinemachines:storeditem")));
+                te.sendUpdates();
+            }
+        }
+        super.setPlacedBy(world, pos, state, placer, stack);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, BlockGetter worldIn, List<Component> tooltip, TooltipFlag flagIn) {
+        if (stack.hasTag()) {
+
+            CompoundTag nbt = stack.getTag();
+            if (nbt.contains("assemblylinemachines:stored") && nbt.contains("assemblylinemachines:storeditem")) {
+                String name = ForgeRegistries.ITEMS.getValue(new ResourceLocation(nbt.getString("assemblylinemachines:storeditem"))).getDescription().getString();
+                tooltip.add(1, Component.literal("This BSU has " + FormattingHelper.formatToSuffix(nbt.getLong("assemblylinemachines:stored")) + " of " + name + " stored.").withStyle(ChatFormatting.GREEN));
+                if (nbt.getBoolean("assemblylinemachines:creative"))
+                    tooltip.add(1, Component.literal("This BSU is modified to be creative.").withStyle(ChatFormatting.DARK_PURPLE));
+            }
+
+        }
+        super.appendHoverText(stack, worldIn, tooltip, flagIn);
+    }
+
+    public static class TEBottomlessStorageUnit extends AbstractMachine<ContainerBottomlessStorageUnit> implements ALMTicker<TEBottomlessStorageUnit> {
+
+        public TEBottomlessStorageUnit(BlockEntityType<?> tileEntityTypeIn, BlockPos pos, BlockState state) {
+            super(tileEntityTypeIn, 2, Component.translatable(Registry.getBlock("bottomless_storage_unit").getDescriptionId()),
+                    Registry.getContainerId("bottomless_storage_unit"), ContainerBottomlessStorageUnit.class, pos, state);
+        }
+
+        public TEBottomlessStorageUnit(BlockPos pos, BlockState state) {
+            this(Registry.getBlockEntity("bottomless_storage_unit"), pos, state);
+        }
+
+        public long internalStored = 0;
+        public Item storedItem = null;
+        public boolean creative = false;
+
+        protected InternalStoredExtractHandler items = new InternalStoredExtractHandler(this);
+        protected LazyOptional<InternalStoredExtractHandler> itemHandler = LazyOptional.of(() -> items);
+
+        @Override
+        public <T> LazyOptional<T> getCapability(Capability<T> cap) {
+            if (cap == ForgeCapabilities.ITEM_HANDLER) {
+                return itemHandler.cast();
+            }
+
+            return LazyOptional.empty();
+        }
+
+        @Override
+        public void setRemoved() {
+            super.setRemoved();
+            if (itemHandler != null) {
+                itemHandler.invalidate();
+            }
+        }
+
+        private class InternalStoredExtractHandler extends InvWrapper {
+
+            InternalStoredExtractHandler(Container inv) {
+                super(inv);
+            }
+
+            @Override
+            public ItemStack extractItem(int slot, int amount, boolean simulate) {
+
+                if (slot == 0) {
+                    if (internalStored != 0 && storedItem != null) {
+                        int max = storedItem.getDefaultInstance().getMaxStackSize();
+                        if (max > internalStored) {
+                            max = (int) internalStored;
+                        }
+
+                        if (max > amount) {
+                            max = amount;
+                        }
+                        ItemStack itemstack = new ItemStack(storedItem, max);
+
+                        if (!simulate && !creative) {
+                            internalStored -= max;
+
+                            if (internalStored <= 0) storedItem = null;
+
+                            sendUpdates();
+                        }
+
+                        return itemstack;
+                    }
+                }
+
+                return ItemStack.EMPTY;
+            }
+
+            @Override
+            public ItemStack getStackInSlot(int slot) {
+                if (slot == 0) {
+                    if (internalStored != 0 && storedItem != null) {
+
+                        int amt = storedItem.getDefaultInstance().getMaxStackSize();
+                        if (amt >= internalStored) {
+                            amt = (int) internalStored;
+                        }
+
+                        return new ItemStack(storedItem, amt);
+                    }
+                }
+                return super.getStackInSlot(slot);
+            }
+        }
+
+        @Override
+        public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
+            return this.getCapability(cap);
+        }
+
+        @Override
+        public boolean isAllowedInSlot(int slot, ItemStack stack) {
+            if (slot == 1) {
+                if (!stack.isDamaged() && !stack.hasTag()) {
+
+                    if (storedItem == null || storedItem == stack.getItem()) {
+                        return true;
+                    }
+
+                }
+            }
+            return false;
+        }
+
+        @Override
+        public void tick() {
+            if (!level.isClientSide) {
+                boolean sendUpdates = false;
+
+                if (internalStored == 0) {
+                    storedItem = null;
+                    sendUpdates = true;
+                }
+
+                if (internalStored != Long.MAX_VALUE && !contents.get(1).isEmpty()) {
+
+                    try {
+                        internalStored = Math.addExact(internalStored, contents.get(1).getCount());
+                        if (storedItem == null) {
+                            storedItem = contents.get(1).getItem();
+                        }
+                        if (creative && storedItem != null && internalStored != Long.MAX_VALUE) {
+                            internalStored = Long.MAX_VALUE;
+                        }
+                        contents.set(1, ItemStack.EMPTY);
+                        sendUpdates = true;
+                    } catch (ArithmeticException e) {
+                    }
+
+                }
+
+                if (sendUpdates) {
+                    sendUpdates();
+                }
+
+            }
+        }
+
+        @Override
+        public void load(CompoundTag compound) {
+            super.load(compound);
+            if (compound.contains("assemblylinemachines:storeditem") && compound.contains("assemblylinemachines:stored")) {
+                storedItem = ForgeRegistries.ITEMS.getValue(new ResourceLocation(compound.getString("assemblylinemachines:storeditem")));
+                internalStored = compound.getLong("assemblylinemachines:stored");
+            } else {
+                storedItem = null;
+                internalStored = 0l;
+            }
+            creative = compound.getBoolean("assemblylinemachines:creative");
+
+
+        }
+
+        @Override
+        public void saveAdditional(CompoundTag compound) {
+
+            if (storedItem != null && internalStored != 0) {
+                compound.putString("assemblylinemachines:storeditem", ForgeRegistries.ITEMS.getKey(storedItem).toString());
+                compound.putLong("assemblylinemachines:stored", internalStored);
+            }
+            compound.putBoolean("assemblylinemachines:creative", creative);
+
+            super.saveAdditional(compound);
+
+        }
+    }
+
+    public static class ContainerBottomlessStorageUnit extends ContainerALMBase<TEBottomlessStorageUnit> {
+
+        private static final Pair<Integer, Integer> PLAYER_INV_POS = new Pair<>(8, 84);
+        private static final Pair<Integer, Integer> PLAYER_HOTBAR_POS = new Pair<>(8, 142);
+
+        public ContainerBottomlessStorageUnit(final int windowId, final Inventory playerInventory, final TEBottomlessStorageUnit tileEntity) {
+            super(Registry.getContainerType("bottomless_storage_unit"), windowId, tileEntity, playerInventory, PLAYER_INV_POS, PLAYER_HOTBAR_POS,  0, 0);
+            checkContainerSize(playerInventory,tileEntity.getContainerSize());
+            this.addSlot(new AbstractMachine.SlotWithRestrictions(this.tileEntity, 0, 17, 60, tileEntity, true));
+            this.addSlot(new AbstractMachine.SlotWithRestrictions(this.tileEntity, 1, 17, 10, tileEntity));
+        }
+
+        public ContainerBottomlessStorageUnit(final int windowId, final Inventory playerInventory, final FriendlyByteBuf data) {
+            this(windowId, playerInventory, Utils.getBlockEntity(playerInventory, data, TEBottomlessStorageUnit.class));
+            checkContainerSize(playerInventory,tileEntity.getContainerSize());
+        }
+
+        @Override
+        public void clicked(int slotId, int dragType, ClickType clickTypeIn, Player player) {
+            if (slotId == 36) {
+
+                if (tileEntity.internalStored != 0 && tileEntity.storedItem != null) {
+                    if (clickTypeIn == ClickType.PICKUP && this.getCarried().isEmpty()) {
+                        int max = tileEntity.storedItem.getDefaultInstance().getMaxStackSize();
+                        if (max > tileEntity.internalStored) {
+                            max = (int) tileEntity.internalStored;
+                        }
+                        if (dragType == 0) {
+
+                            this.setCarried(new ItemStack(tileEntity.storedItem, max));
+                            reduceInternal(max);
+
+                        } else if (dragType == 1) {
+
+                            max = Math.round(max / 2f);
+
+                            this.setCarried(new ItemStack(tileEntity.storedItem, max));
+                            reduceInternal(max);
+                        }
+                    } else if (clickTypeIn == ClickType.QUICK_MOVE && dragType == 0) {
+
+                        int max = tileEntity.storedItem.getDefaultInstance().getMaxStackSize();
+                        if (max > tileEntity.internalStored) {
+                            max = (int) tileEntity.internalStored;
+                        }
+
+                        ItemStack itemstack = new ItemStack(tileEntity.storedItem, max);
+                        if (this.moveItemStackTo(itemstack, 0, 36, false)) {
+                            max -= itemstack.getCount();
+                            reduceInternal(max);
+                        }
+                    }
+
+                }
+            }
+
+            super.clicked(slotId, dragType, clickTypeIn, player);
+        }
+
+        private void reduceInternal(int amt) {
+
+            if (!tileEntity.creative) {
+                tileEntity.internalStored -= amt;
+
+                if (tileEntity.internalStored <= 0) tileEntity.storedItem = null;
+
+                tileEntity.sendUpdates();
+            }
+        }
+
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public static class ScreenBottomlessStorageUnit extends ScreenALMBase<ContainerBottomlessStorageUnit> {
+
+        TEBottomlessStorageUnit tsfm;
+
+
+        public ScreenBottomlessStorageUnit(ContainerBottomlessStorageUnit screenContainer, Inventory inv, Component titleIn) {
+            super(screenContainer, inv, titleIn, new Pair<>(176, 166), new Pair<>(11, 6), new Pair<>(11, 73), "bottomless_storage_unit", false);
+            renderTitleText = false;
+            renderInventoryText = false;
+            tsfm = screenContainer.tileEntity;
+        }
+
+        @Override
+        protected void drawGuiContainerForegroundLayer(GuiGraphics gg,int mouseX, int mouseY) {
+            super.drawGuiContainerForegroundLayer(gg,mouseX, mouseY);
+
+            if (tsfm.storedItem != null) {
+                String n = tsfm.storedItem.getDescription().getString();
+
+                if (n.length() > 30) {
+                    n = n.substring(0, 30) + "...";
+                }
+                float wsc = 110f / this.font.width(n);
+                if (wsc > 3f) wsc = 3f;
+                ScreenMath.renderScaledText(gg,this.font, 52, 13, wsc, n, false, 0xd4d4d4);
+
+                n = FormattingHelper.GENERAL_FORMAT.format(tsfm.internalStored);
+                wsc = 110f / this.font.width(n);
+                if (wsc > 2f) wsc = 2f;
+                ScreenMath.renderScaledText(gg,this.font, 52, 54, wsc, n, false, 0xd4d4d4);
+            }
+
+        }
+
+        @Override
+        protected void drawGuiContainerBackgroundLayer(GuiGraphics gg,float partialTicks, int mouseX, int mouseY) {
+            super.drawGuiContainerBackgroundLayer(gg,partialTicks, mouseX, mouseY);
+
+            int x = (this.width - this.imageWidth) / 2;
+            int y = (this.height - this.imageHeight) / 2;
+            if (tsfm.storedItem != null) {
+
+                this.gg.renderItem(tsfm.storedItem.getDefaultInstance(), (x + 17), (y + 60));
+                if (tsfm.internalStored < 10000) {
+
+                    ScreenMath.renderItemSlotBoundScaledText(gg,this.font, x + 25, y + 68, 0.5f, FormattingHelper.GENERAL_FORMAT.format(tsfm.internalStored));
+                } else {
+                    ScreenMath.renderItemSlotBoundScaledText(gg,this.font, x + 25, y + 68, 0.5f, FormattingHelper.formatToSuffix(tsfm.internalStored));
+                }
+            }
+
+        }
+
+
+    }
+}

@@ -1,0 +1,9 @@
+{
+	"type": "assemblylinemachines:world_corruption",
+	"input":{
+		"item": "minecraft:lapis_ore"
+	},
+	"output":{
+		"item": "assemblylinemachines:corrupt_lapis_ore"
+	}
+}

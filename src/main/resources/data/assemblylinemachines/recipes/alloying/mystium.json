@@ -1,0 +1,36 @@
+{
+  "type": "assemblylinemachines:alloying",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/mystium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/electrified_netherite"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/mystium"
+      }
+    }
+  ],
+  "output": {
+    "tag": "forge:ingots/mystium"
+  },
+  "part_a": {
+    "tag": "forge:dusts/mystium"
+  },
+  "part_b": {
+    "tag": "forge:dusts/electrified_netherite"
+  },
+  "time": 100
+}

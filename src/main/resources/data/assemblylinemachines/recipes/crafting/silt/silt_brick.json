@@ -1,0 +1,16 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"xx",
+		"xx"
+	],
+	"key":{
+		"x":{
+			"item": "assemblylinemachines:smooth_silt"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:silt_brick",
+		"count": 4
+	}
+}

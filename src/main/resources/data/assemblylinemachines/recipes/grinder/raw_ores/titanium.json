@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "chanceToDouble": 0.25,
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/titanium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/titanium"
+      }
+    }
+  ],
+  "grinds": 5,
+  "input": {
+    "tag": "forge:raw_materials/titanium"
+  },
+  "output": {
+    "tag": "forge:dusts/titanium"
+  }
+}

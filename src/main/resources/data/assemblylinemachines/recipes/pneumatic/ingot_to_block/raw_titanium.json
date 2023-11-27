@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:raw_materials/titanium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/raw_titanium"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:raw_materials/titanium"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/raw_titanium"
+  },
+  "time": 9
+}

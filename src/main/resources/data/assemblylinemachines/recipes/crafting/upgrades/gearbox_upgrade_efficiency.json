@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"igi",
+		"grg",
+		"igi"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:plates/pure_iron"
+		},
+		"g":{
+			"tag": "forge:plates/pure_gold"
+		},
+		"r":{
+			"tag": "forge:storage_blocks/lapis"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:gearbox_upgrade_efficiency"
+	}
+}

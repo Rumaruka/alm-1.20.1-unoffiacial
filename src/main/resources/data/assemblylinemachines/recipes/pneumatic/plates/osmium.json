@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorPlateIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/osmium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/osmium"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/osmium"
+  },
+  "mold": "plate",
+  "output": {
+    "tag": "forge:plates/osmium"
+  },
+  "time": 7
+}

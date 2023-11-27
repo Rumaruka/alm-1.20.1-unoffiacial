@@ -1,0 +1,17 @@
+{
+	"type": "assemblylinemachines:bath",
+	"input_a":{
+		"tag": "minecraft:sand"
+	},
+	"input_b":{
+		"tag": "forge:gravel"
+	},
+	"output":{
+		"item": "assemblylinemachines:silt",
+		"count": 4
+	},
+	"stirs": 4,
+	"fluid": "minecraft:water",
+	"mixer_type": "MIXER_ONLY",
+	"drain_percent": "QUARTER"
+}

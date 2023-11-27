@@ -1,0 +1,29 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"mcm",
+		"cxc",
+		"ypy"
+	],
+	"key":{
+		"m":{
+			"tag": "forge:plates/mystium"
+		},
+		"c":{
+			"tag": "forge:plates/stainless_steel"
+		},
+		"x":{
+			"item": "assemblylinemachines:compressed_crafting_table"
+		},
+		"p":{
+			"tag": "forge:storage_blocks/lapis"
+		},
+		"y":{
+			"item": "assemblylinemachines:conduction_component"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:autocrafting_table"
+	}
+}

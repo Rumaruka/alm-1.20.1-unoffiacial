@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorRodIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/lead"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:rods/lead"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/lead"
+  },
+  "mold": "rod",
+  "output": {
+    "tag": "forge:rods/lead"
+  },
+  "time": 8
+}

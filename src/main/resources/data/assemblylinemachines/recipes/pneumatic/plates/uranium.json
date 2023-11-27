@@ -1,0 +1,31 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorPlateIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/uranium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/uranium"
+      }
+    }
+  ],
+  "input": {
+    "tag": "forge:ingots/uranium"
+  },
+  "mold": "plate",
+  "output": {
+    "tag": "forge:plates/uranium"
+  },
+  "time": 7
+}

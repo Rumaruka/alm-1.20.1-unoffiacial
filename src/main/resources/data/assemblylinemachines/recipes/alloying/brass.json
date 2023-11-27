@@ -1,0 +1,41 @@
+{
+  "type": "assemblylinemachines:alloying",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "alloyIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/copper"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/zinc"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ingots/brass"
+      }
+    }
+  ],
+  "output": {
+    "count": 2,
+    "tag": "forge:ingots/brass"
+  },
+  "part_a": {
+    "tag": "forge:ingots/copper"
+  },
+  "part_b": {
+    "tag": "forge:ingots/zinc"
+  },
+  "time": 100
+}

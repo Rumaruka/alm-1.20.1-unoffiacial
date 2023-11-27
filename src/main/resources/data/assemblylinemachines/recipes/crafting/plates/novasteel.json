@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "lateGamePlatesRequireCompressor",
+      "enabled_on": false
+    }
+  ],
+  "ingredients": [
+    {
+      "tag": "forge:ingots/novasteel"
+    },
+    {
+      "tag": "assemblylinemachines:hammers"
+    }
+  ],
+  "result": {
+    "item": "assemblylinemachines:novasteel_plate"
+  }
+}

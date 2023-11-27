@@ -1,0 +1,26 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"bso",
+		"sjs",
+		"osb"
+	],
+	"key":{
+		"b":{
+			"item": "minecraft:crimson_fungus"
+		},
+		"o":{
+			"item": "minecraft:warped_fungus"
+		},
+		"j":{
+			"item": "minecraft:nether_wart"
+		},
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		}
+		
+	},
+	"result":{
+		"item": "assemblylinemachines:greenhouse_upgrade_interdimensional_specialization"
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"asa",
+		"s s",
+		"asa"
+	],
+	"key":{
+		"s":{
+			"tag": "forge:plates/pure_steel"
+		},
+		"a":{
+			"tag": "forge:plates/attuned_titanium"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:entropy_reactor_block",
+		"count": 5
+	}
+}

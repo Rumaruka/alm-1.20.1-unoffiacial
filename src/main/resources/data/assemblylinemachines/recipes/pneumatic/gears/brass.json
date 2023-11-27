@@ -1,0 +1,32 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "assemblylinemachines:config",
+      "config_option": "compressorGearIMC"
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/brass"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/brass"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/brass"
+  },
+  "mold": "gear",
+  "output": {
+    "tag": "forge:gears/brass"
+  },
+  "time": 9
+}

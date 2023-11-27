@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern":[
+		"igi",
+		"grg",
+		"igi"
+	],
+	"key":{
+		"i":{
+			"tag": "forge:sheets/plastic"
+		},
+		"g":{
+			"tag": "forge:plates/stainless_steel"
+		},
+		"r":{
+			"item": "assemblylinemachines:item_pipe_upgrade_filter"
+		}
+	},
+	"result":{
+		"item": "assemblylinemachines:purifier_upgrade_enhanced"
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:blasting",
+	"ingredient":{
+		"tag": "forge:ores/corrupt_coal"
+	},
+	"result": "minecraft:coal",
+	"experience": 1,
+	"cookingtime": 100
+}

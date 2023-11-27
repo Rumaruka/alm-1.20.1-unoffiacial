@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "assemblylinemachines:block/naphtha_turbine" },
+        "facing=south": { "model": "assemblylinemachines:block/naphtha_turbine", "y": 180 },
+        "facing=west":  { "model": "assemblylinemachines:block/naphtha_turbine", "y": 270 },
+        "facing=east":  { "model": "assemblylinemachines:block/naphtha_turbine", "y": 90 }
+    }
+}

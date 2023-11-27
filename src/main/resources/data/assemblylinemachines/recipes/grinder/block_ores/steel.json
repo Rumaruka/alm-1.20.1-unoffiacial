@@ -1,0 +1,28 @@
+{
+  "type": "assemblylinemachines:grinder",
+  "bladetype": "TITANIUM",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:ores/steel"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:dusts/steel"
+      }
+    }
+  ],
+  "grinds": 10,
+  "input": {
+    "tag": "forge:ores/steel"
+  },
+  "output": {
+    "count": 2,
+    "tag": "forge:dusts/steel"
+  }
+}

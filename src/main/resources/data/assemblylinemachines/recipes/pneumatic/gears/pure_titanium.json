@@ -1,0 +1,29 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:plates/pure_titanium"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gears/pure_titanium"
+      }
+    }
+  ],
+  "input": {
+    "count": 4,
+    "tag": "forge:plates/pure_titanium"
+  },
+  "mold": "gear",
+  "output": {
+    "count": 2,
+    "tag": "forge:gears/pure_titanium"
+  },
+  "time": 9
+}

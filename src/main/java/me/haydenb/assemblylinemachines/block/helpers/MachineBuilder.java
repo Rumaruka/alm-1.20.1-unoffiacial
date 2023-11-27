@@ -1148,7 +1148,7 @@ public class MachineBuilder {
                         RenderSystem.setShader(GameRenderer::getPositionTexShader);
                         RenderSystem.setShaderTexture(0, InventoryMenu.BLOCK_ATLAS);
                         try {
-                            super.blit(x + fluidBarTopLeftX, y + fluidBarTopLeftY, fluidBarHeight, fluidBarHeight, fluidBarHeight, cache.get(fluid, () -> Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(IClientFluidTypeExtensions.of(fluid).getStillTexture())));
+                            super.blit(x + fluidBarTopLeftX, y + fluidBarTopLeftY, 8, fluidBarHeight, fluidBarHeight, cache.get(fluid, () -> Minecraft.getInstance().getTextureAtlas(InventoryMenu.BLOCK_ATLAS).apply(IClientFluidTypeExtensions.of(fluid).getStillTexture())));
                         } catch (Exception e) {
                             e.printStackTrace();
                         }

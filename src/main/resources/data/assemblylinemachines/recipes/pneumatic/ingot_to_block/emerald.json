@@ -1,0 +1,27 @@
+{
+  "type": "assemblylinemachines:pneumatic",
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:gems/emerald"
+      }
+    },
+    {
+      "type": "forge:not",
+      "value": {
+        "type": "forge:tag_empty",
+        "tag": "forge:storage_blocks/emerald"
+      }
+    }
+  ],
+  "input": {
+    "count": 9,
+    "tag": "forge:gems/emerald"
+  },
+  "output": {
+    "tag": "forge:storage_blocks/emerald"
+  },
+  "time": 9
+}
